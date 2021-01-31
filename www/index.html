@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>哈哈哈哈</h1>
+
+  <script src="/xuni/bundle.js"></script>
+  <script>
+    var templateStr = "我爱{{somebody}}，{{somebody}}也爱我。{{obj.hop}}"
+    var data = {
+      somebody: "饶韬",
+      obj: {
+        hop: '上学了'
+      }
+    }
+
+    var templateStr2 =
+      `
+  <div>
+    <ol>
+      {{#students}}
+      <li>
+        学生{{name}}的爱好是
+        <ol>
+          {{#hobbies}}
+          <li>{{.}}</li>
+        </ol>
+        {{/hobbies}}
+      </li>
+      {{/students}}
+    </ol>
+  </div>
+`
+    var data2 = {
+      students: [
+        { "name": "小明", "hobbies": ['游泳', '健身'] },
+        { "name": "小红", "hobbies": ['足球', '篮球', '羽毛球'] },
+        { "name": "小强", "hobbies": ['吃饭', '睡觉'] },
+      ]
+    }
+
+    let domStr = templateEngine.render(templateStr2, data2)
+  </script>
+</body>
+
+</html>
