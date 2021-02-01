@@ -110,3 +110,22 @@ var data = {
       </ul>
   <div>
 ```
+
+#### 下载项目,在本地任意处打开cmd/git命令栏，输入以下指令回车即可
+```
+git clone https://github.com/raotaohub/study_mustach
+```
+#### 安装依赖
+```
+npm install
+```
+
+#### 运行项目
+```
+npm run dev
+```
+
+#### 本地打包项目
+```
+npm run build
+```
